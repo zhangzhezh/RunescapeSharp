@@ -30,6 +30,16 @@ namespace RunescapeSharp
         public Bestiary Bestiary;
 
         /// <summary>
+        /// Instance of RuneMetrics associated with this RunescapeAPI
+        /// </summary>
+        public RuneMetrics RuneMetrics;
+
+        /// <summary>
+        /// Instance of Other associated with this RunescapeAPI
+        /// </summary>
+        public Other Other;
+
+        /// <summary>
         /// Creates a new RunescapeAPI and initializes the Client with the correct settings
         /// </summary>
         /// <returns>RunescapeAPI</returns>
@@ -48,6 +58,9 @@ namespace RunescapeSharp
             GrandExchange = new GrandExchange(Client);
             Bestiary = new Bestiary(Client);
             Hiscores = new Hiscores(Client);
+            RuneMetrics = new RuneMetrics(Client);
+            Other = new Other(Client);
+
         }
     }
 }
